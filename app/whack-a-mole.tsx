@@ -31,7 +31,7 @@ export default function WhackAMoleScreen() {
   const [timeLeft, setTimeLeft] = useState(DURATION_OPTIONS[1]);
   const [gameOver, setGameOver] = useState(false);
   const [bgColor, setBgColor] = useState(new Animated.Value(0)); // 0: normal, 1: green, -1: red
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const timerRef = useRef<number | null>(null);
 
   useEffect(() => {
     if (!playing) return;
